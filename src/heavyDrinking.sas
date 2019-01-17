@@ -25,7 +25,7 @@
 %macro heavyDrinking(out=heavyDrinking,
                      cchs_data=,
                      demographics=,
-                     adultsOnly=true;
+                     adultsOnly=true);
 %local out cchs_data demographics adultsOnly;
   /*Parameter validation*/
   %validate(data=&cchs_data,include=&demographics)
