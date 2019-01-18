@@ -1,0 +1,14 @@
+# Site settings
+description: Take the guesswork out of CCHS coding
+baseurl: "/ribosome"
+url: "https://WatDurCodeGroup.github.io"
+
+# User settings
+username: WatDurCodeGroup
+user_description: Data analysts and Researchers making data fun again
+user_title: WatDurCodeGroup
+email: foo@example.com
+github_username: WatDurCodeGroup
+
+# Build settings
+markdown: kramdown
