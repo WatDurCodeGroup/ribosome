@@ -32,60 +32,24 @@
 		</ul>
 		<header role="banner">
 			<div id="wb-bnr">
-				<div id="wb-bar">
-					<div class="container">
-						<div class="row">
-{% unless page.languagetoggle == "false" %}
-							<section id="wb-lng" class="visible-md visible-lg">
-								<h2>{{ site.data.i18n-base[page.language].tmpl-lang-select }}</h2>
-								{% include base/languagetoggle.html %}
-							</section>
-{% endunless %}
-{% unless page.mobimenu == "false" %}
-							<section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
-								<h2>{{ site.data.i18n-base[page.language].srch-menus }}</h2>
-								{% include base/mobimenu.html %}
-							</section>
-{% endunless %}
-						</div>
-					</div>
-				</div>
-
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row">
-
-						<div id="wb-sttl" class="col-md-8">
+						<div id="wb-sttl" class="col-md-2">
 							{% include theme-base/brand.html %}
 						</div>
-{% unless page.sitesearch == "false" %}
-						<section id="wb-srch" class="col-md-4 visible-md visible-lg">
-							<h2>{{ site.data.i18n-base[page.language].tmpl-search }}</h2>
-							{% include base/sitesearch.html %}
-						</section>
-{% endunless %}
+            <nav role="navigation" id="wb-sm" data-ajax-fetch="{% if page.altMenu == null or page.altMenu == '' %}http://wet-boew.github.io/wet-boew/ajax/sitemenu{% else %}{{ page.altMenu }}{% endif %}-{{ page.language }}.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+              {% include base/sitemenu.html %}
+            </nav>
 					</div>
 				</div>
 			</div>
-{% if page.sitemenu == "false" %}
-			<span data-trgt="mb-pnl" class="wb-menu hide"></span>
-{% else %}
-			<nav role="navigation" id="wb-sm" data-ajax-fetch="{% if page.altMenu == null or page.altMenu == '' %}http://wet-boew.github.io/wet-boew/ajax/sitemenu{% else %}{{ page.altMenu }}{% endif %}-{{ page.language }}.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
-				{% include base/sitemenu.html %}
-			</nav>
-{% endif %}
-{% unless page.breadcrumb == "false" %}
-			<nav role="navigation" id="wb-bc" property="breadcrumb">
-				<h2>{{ site.data.i18n-base[page.language].you-are-here }}</h2>
-				{% include base/breadcrumbs.html %}
-			</nav>
-{% endunless %}
 		</header>
 
 {% if page.secondarymenu == "true" %}
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 {% endif %}
-		<main role="main" property="mainContentOfPage" class="{% if page.secondarymenu == "true" %}col-md-9 col-md-push-3{% else %}container{% endif %}">
+		<main role="main" property="mainContentOfPage" class="{% if page.secondarymenu == "true" %}col-md-9 col-md-push-3{% else %}container-fluid{% endif %}">
 			<h1 id="wb-cont" property="name">{{ page.title }}</h1>
 			{% include base/contentbuttons.html %}
 			{{ content }}
@@ -105,7 +69,7 @@
 
 {% unless page.footer == "false" %}
 		<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
-			<div class="container">
+			<div class="container-fluid">
 				<nav role="navigation" class="row">
 					<h2>{{ site.data.i18n-base[page.language].tmpl-about-site }}</h2>
 					{% include theme-base/footer.html %}
