@@ -44,39 +44,26 @@
 				</div>
 			</div>
 		</header>
-
-{% if page.secondarymenu == "true" %}
-		<div class="container-fluid">
-			<div class="row">
-{% endif %}
 		<main role="main" property="mainContentOfPage" class="{% if page.secondarymenu == "true" %}col-md-9 col-md-push-3{% else %}container-fluid{% endif %}">
-			<h1 id="wb-cont" property="name">{{ page.title }}</h1>
+			<h1 id="wb-cont" class="wb-inv" property="name">{{ page.title }}</h1>
 			{% include base/contentbuttons.html %}
 			{{ content }}
-{% if page.modified == null or page.modified == '' %}
-{% else %}
-			{% include base/datemodified.html %}
-{% endif %}
 		</main>
-{% if page.secondarymenu == "true" %}
-				<nav role="navigation" id="wb-sec" typeof="SiteNavigationElement" class="col-md-3 col-md-pull-9 visible-md visible-lg">
-					<h2>{{ site.data.i18n-base[page.language].tmpl-section-menu }}</h2>
-					{% include base/secondarymenu.html %}
-				</nav>
-			</div>
-		</div>
-{% endif %}
-
-{% unless page.footer == "false" %}
-		<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
-			<div class="container-fluid">
+    {% include features.html %}
+		<footer role="contentinfo" id="wb-info" class="container-fluid visible-sm visible-md visible-lg wb-navcurr">
+			<div class="container">
 				<nav role="navigation" class="row">
 					<h2>{{ site.data.i18n-base[page.language].tmpl-about-site }}</h2>
 					{% include theme-base/footer.html %}
 				</nav>
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Made with love and coffee by <a href="https://twitter.com/jamesd_lane">@jamesd_lane</a>. Maintained by the WatDurCodeGroup.</p>
+            <p>Documentation CC BY 4.0</p>
+          </div>
+        </div>
 			</div>
 		</footer>
-{% endunless %}
 		{% include base/footerresources.html %}
 	</body>
 </html>
