@@ -18,11 +18,12 @@
 		<meta name="description" content="English description / Description en anglais" />
 		<!-- Meta data-->
 		<!--[if gte IE 9 | !IE ]><!-->
-<link href="http://wet-boew.github.io/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon" />
+<link href="http://localhost:4000/ribosome/assets/images/favicon.ico" rel="icon" type="image/x-icon" />
+<script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
 <!--<![endif]-->
 <link rel="stylesheet" href=http://localhost:4000/ribosome/css/theme.css/>
 <!--[if lt IE 9]>
-<link href="http://wet-boew.github.io/wet-boew/assets/favicon.ico" rel="shortcut icon" />
+<link href="http://localhost:4000/ribosome/assets/images/favicon.ico" rel="shortcut icon" />
 <link rel="stylesheet" href="http://wet-boew.github.io/wet-boew/css/ie8-wet-boew.min.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://wet-boew.github.io/wet-boew/js/ie8-wet-boew.min.js"></script>
@@ -80,24 +81,40 @@
 			
 
 		</main>
-    <div class="features container-fluid">  
+    <!-- Define the symbols, these are invisible on the page -->
+<i data-fa-symbol="file" class="far fa-file-code"></i>
+<i data-fa-symbol="horse" class="fas fa-horse-head"></i>
+<i data-fa-symbol="hands" class="fas fa-hands-helping"></i>
+
+<div class="features container-fluid">  
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <p class="lead">Super Simple.</p>
+    <div class="row feature">
+      <div class="col-md-7">
+        <h2 class="lead">Super Simple.</h2>
         <p>Ribosome uses as little configuration as possible to keep the learning curve flat. Working with it is a cinch!</p>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <p class="lead">Really Reliable.</p>
-        <p>By using a central repository, the analysis will work the same on any system.</p>
+      <div class="col-md-5">
+        <svg class="icon center-block"><use xlink:href="#file"></use></svg>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <p class="lead">Clearly Collaborative.</p>
+    <hr class="feature-divider">
+    <div class="row feature">
+      <div class="col-md-7 col-md-push-5">
+        <h2 class="lead">Really Reliable.</h2>
+        <p>By using a central repository, the analysis will work the same on any system.</p>
+      </div>
+      <div class="col-md-5 col-md-pull-7">
+        <svg class="icon center-block"><use xlink:href="#horse"></use></svg>
+      </div>
+    </div>
+    <hr class="feature-divider">
+    <div class="row feature">
+      <div class="col-md-7">
+        <h2 class="lead">Clearly Collaborative.</h2>
         <p>We leverage the shared experience of analysts and researchers to reduce duplication of problem-solving.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="icon center-block"><use xlink:href="#hands"></use></svg>
       </div>
     </div>
   </div>

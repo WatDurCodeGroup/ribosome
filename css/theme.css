@@ -9648,6 +9648,17 @@ main {
     height: 430px; }
   .features{
     background: #e5e5e5; }
+  .feature{
+    margin: 3rem 0; }
+  .feature-divider{
+    margin: 5rem 0;
+    border: 0;
+    border-top: 1px solid #333; }
+    /*
+  SVG icons
+  */
+  .icon {    
+    vertical-align: -0.125em; }
 /* Medium view and under */
 @media screen and (max-width: 1199px) {
   /*
@@ -9718,7 +9729,6 @@ main {
  */
   #wb-srch {
     margin-bottom: 20px; } }
-
 /* Medium view */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   /*
