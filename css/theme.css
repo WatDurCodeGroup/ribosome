@@ -9284,7 +9284,7 @@ details {
   width: 100%; }
   
 #wb-bnr{
-  background:#4ca6a6;}
+  background:#007070;}
   
 #wb-bar {
   background: #113c9d;
@@ -9334,6 +9334,10 @@ details {
   line-height: normal;
   text-decoration: none;
   text-shadow: 1px 1px 1px #333; }
+  #wb-sttl a .nav-title{
+    padding-bottom: 0.75rem;
+    padding-top: 0.5rem;
+    display: block; }
 
 #wb-sttl small {
   display: block;
@@ -9408,18 +9412,16 @@ main {
   color: #fff; }
 
 #wb-sm .menu > li > a:hover, #wb-sm .menu > li.active > a {
-  background: #113c8d;
   color: #fff;
-  font-weight: 700; }
+  text-decoration: underline;}
 
 #wb-sm {
   background: #4ca6a6;
-  color: #333; }
+  color: #fff; }
   #wb-sm .menu {
     margin-bottom: 0; }
     #wb-sm .menu > li > a {
-      color: #000;
-	  font-weight: 700; }
+      color: #e5e5e5;}
   #wb-sm .sm.open {
     background: #ccc;
     border-bottom: 5px solid #243850;
@@ -9675,15 +9677,7 @@ main {
   /*
   WET-BOEW
   @title: Medium view and over (screen only)
- */
-  /*
- Banner
- */
-  #wb-sttl a {
-    display: table-row; }
-  #wb-sttl span {
-    display: table-cell;
-    vertical-align: middle; } }
+*/ }
 
 /* Large view and over */
 @media screen and (min-width: 1200px) {
