@@ -13,10 +13,6 @@
  *
  */
 /*
- * Import fonts from Google Fonts
- */
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');
-/*
  Default Mixins and namespace variables
  */
 .wb-invisible, .wb-inv, .wb-show-onfocus, .wb-sl, #wb-lng h2, #wb-glb-mn h2, #wb-srch h2, #wb-srch label, #wb-sm h2, #wb-bc h2, #wb-sec h2, #wb-info h2, #mb-pnl h3, .wb-calevt-cal .cal-days td ul, .wb-fnote dt, #mb-pnl .srch-pnl label, #wb-lng .curr span {
@@ -311,12 +307,12 @@ select{
 a {
   color: #295376;
   text-decoration: none; }
-  a:hover, a:focus {
+  a:hover {
     color: #0535d2;
     text-decoration: underline; }
-  a:focus {
-    outline: 5px auto currentcolor;
-    outline-offset: -2px; }
+  a:focus{
+    text-decoration: none;
+    outline: currentcolor dotted 1px; }
 
 figure {
   margin: 0; }
@@ -531,6 +527,13 @@ a.text-warning:focus {
 a.text-danger:hover,
 a.text-danger:focus {
   color: #843534; }
+  
+.text-second {
+  color: #ffd700; }  
+  
+a.text-second:hover,
+a.text-second:focus {
+  color: #333; }
 
 .bg-primary {
   color: #fff; }
@@ -2286,6 +2289,16 @@ fieldset[disabled] a.btn {
   .btn-danger .badge {
     color: #bc3331;
     background-color: #fff; }
+
+.btn-second {
+  color: #ffd700;
+  border-color: #ffd700;}
+  .btn-second:focus {
+    color: #ffd700;
+    box-shadow: 0 0 0 3px rgba(255,215,0,0.25); }
+  .btn-second:active, .btn-second:hover {
+    color: #333;
+    background-color: #ffd700; }
 
 .btn-link {
   color: #295376;
@@ -5049,8 +5062,6 @@ a.btn, .nav a {
 
 a {
   text-decoration: underline; }
-  a:visited {
-    color: #7834bc; }
   a:not([href]) {
     color: inherit;
     text-decoration: none; }
@@ -9285,6 +9296,7 @@ details {
   width: 100%; }
   
 #wb-bnr{
+  padding: 5px 0 5px 0;
   background:#007070;}
   
 #wb-bar {
@@ -9570,6 +9582,12 @@ main {
 footer a{
   color: #333;
 	text-decoration: underline;}
+/*
+ Download button
+*/
+.download{
+  padding-top: 9px; }
+ 
 /*
  Views
  */

@@ -14,12 +14,12 @@
 		<meta name="description" content="Base theme - Jekyll variant - Web Experience Toolkit (WET)" />
 		<!-- Meta data-->
 		<!--[if gte IE 9 | !IE ]><!-->
-<link href="https://watdurcodegroup.github.io/ribosome/assets/images/favicon.ico" rel="icon" type="image/x-icon" />
+<link href="http://localhost:4000/ribosome/assets/images/favicon.ico" rel="icon" type="image/x-icon" />
 <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
 <!--<![endif]-->
-<link rel="stylesheet" href="https://watdurcodegroup.github.io/ribosome/css/theme.css"/>
+<link rel="stylesheet" href="http://localhost:4000/ribosome/css/theme.css"/>
 <!--[if lt IE 9]>
-<link href="https://watdurcodegroup.github.io/ribosome/assets/images/favicon.ico" rel="shortcut icon" />
+<link href="http://localhost:4000/ribosome/assets/images/favicon.ico" rel="shortcut icon" />
 <link rel="stylesheet" href="http://wet-boew.github.io/wet-boew/css/ie8-wet-boew.min.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://wet-boew.github.io/wet-boew/js/ie8-wet-boew.min.js"></script>
@@ -41,8 +41,8 @@
 
 		</ul>
 		<header role="banner">
-			<div id="wb-bnr">
-				<div class="container-fluid">
+			<div id="wb-bnr" class="container-fluid">
+				<div class="container">
 					<div class="row">
 						<div id="wb-sttl" class="col-md-2">
 							<a href="/ribosome">
@@ -51,17 +51,18 @@
 
 						</div>
             <nav role="navigation" id="wb-sm" data-ajax-fetch="http://wet-boew.github.io/wet-boew/ajax/sitemenu-en.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
-              <div class="nvbar">
+              <div class="nvbar col-md-6">
 	<h2>Topics menu</h2>
     <ul class="list-inline menu">
       <li><a href="#">Getting started</a></li>
       <li><a href="#">Documentation</a></li>
+      <li><a href="#">Examples</a></li>
       <li><a href="#">Contribute</a></li>
-      <li><a href="#">Download</a></li>
-    </ul>
-    
+    </ul>    
 </div>
-
+<div class="col-md-3 download">
+  <a class="btn btn-second" href="#">Download</a>
+</div>
             </nav>
 					</div>
 				</div>
