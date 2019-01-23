@@ -1,0 +1,9 @@
+list:
+  - title: Documentation
+    subpages:
+      - page: Getting started
+        url: /getting-started.html
+      - page: Installation
+        url: /install.html
+      - page: Another topic
+        url: /foo.html
