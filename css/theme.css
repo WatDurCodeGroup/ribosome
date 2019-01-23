@@ -6238,6 +6238,66 @@ q:before, q:after {
 .mrgn-rght-xl {
   margin-right: 50px; }
 
+.pad-lft-0 {
+  padding-left: 0; }
+
+.pad-lft-sm {
+  padding-left: 5px; }
+
+.pad-lft-md {
+  padding-left: 15px; }
+
+.pad-lft-lg {
+  padding-left: 30px; }
+
+.pad-lft-xl {
+  padding-left: 50px; }
+
+.pad-bttm-0 {
+  padding-bottom: 0; }
+
+.pad-bttm-sm {
+  padding-bottom: 5px; }
+
+.pad-bttm-md {
+  padding-bottom: 15px; }
+
+.pad-bttm-lg {
+  padding-bottom: 30px; }
+
+.pad-bttm-xl {
+  padding-bottom: 50px; }
+
+.pad-tp-0 {
+  padding-top: 0; }
+
+.pad-tp-sm {
+  padding-top: 5px; }
+
+.pad-tp-md {
+  padding-top: 15px; }
+
+.pad-tp-lg {
+  padding-top: 30px; }
+
+.pad-tp-xl {
+  padding-top: 50px; }
+
+.pad-rght-0 {
+  padding-right: 0; }
+
+.pad-rght-sm {
+  padding-right: 5px; }
+
+.pad-rght-md {
+  padding-right: 15px; }
+
+.pad-rght-lg {
+  padding-right: 30px; }
+
+.pad-rght-xl {
+  padding-right: 50px; }
+  
 .brdr-lft, .brdr-rght, .brdr-tp, .brdr-bttm {
   border: solid 0 #ccc; }
 
@@ -9653,7 +9713,7 @@ footer a{
     display: none; } }
   #gene {
     height: 430px; }
-  .features{
+  .features, #wb-info{
     background: #e5e5e5; }
   .feature{
     margin: 3rem 0; }
