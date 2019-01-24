@@ -1,0 +1,10 @@
+<div class="col-md-2">
+  {% for item in site.data.toc.list %}
+    <h2>{{ item.title }}</h2>
+    <ul class="list-unstyled">
+    {% for entry in item.subpages %}
+      <li><a href="{{ entry.url }}">{{ entry.page }}</a></li>
+    {% endfor %}
+  {% endfor %}
+  </ul>  
+</div>
