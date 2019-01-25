@@ -7,3 +7,11 @@ list:
         url: /install.html
       - page: Another topic
         url: /foo.html
+  - title: Examples
+    subpages:
+      - page: Inital set up
+        url: /inital-set-up.html
+      - page: Running a dummy code macro
+        url: /running-a-dummy-code-macro.html
+      - page: Merge bootstarp weights
+        url: /merge-bootstarp-weights.html

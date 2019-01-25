@@ -9727,6 +9727,10 @@ footer a{
   .icon {    
     color: #007070;
     vertical-align: -0.125em; }
+  .icon-inline{
+    height: 1.5rem;
+    width: 2rem;
+    vertical-align: -0.125em; }
 /* Medium view and under */
 @media screen and (max-width: 1199px) {
   /*
