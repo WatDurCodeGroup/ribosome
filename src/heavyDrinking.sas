@@ -30,7 +30,7 @@
   /*Parameter validation*/
   %validate(data=&cchs_data,include=&demographics)
   data &out;
-    set &cchs_data.(keep=ont_id alc_020 dhh_age);
+    set &cchs_data.(keep=ont_id alc_020 dhh_age &demographics);
     select(alc_020);
       when(3,4,5,6) heavyDrinking = 1;
       when(1,2,96) heavyDrinking = 0;
