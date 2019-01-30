@@ -12,3 +12,9 @@ github_username: WatDurCodeGroup
 
 # Build settings
 markdown: kramdown
+
+# Macro documentation
+collections:
+  macros:
+    output: true
+    permalink: /macros/:path/

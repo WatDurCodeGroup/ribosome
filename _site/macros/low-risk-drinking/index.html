@@ -104,48 +104,38 @@
   
 </div>
             <div class="col-md-8">
-            <h2 id="getting-started">Getting Started</h2>
-<p>Ribosome is a flat-file collection of macros that are run with <a href="https://sas.com">SAS</a>. Ribosome works best with SAS version <code class="highlighter-rouge">&gt;=9.4</code>.</p>
+            <h2>%lowRiskDrinking</h2>
+<p>Idenfity respondents at no increased long-term health risk, according to the Canadian Low-Risk Drinking Guidelines: Guideline 2</p>
 
-<p>If you don’t have SAS installed on your system, you can download a free copy of <a href="https://www.sas.com/en_us/software/university-edition.html">SAS University Edition</a> for non-commercial use.</p>
-
-<p>If you’re already set up with SAS and are looking for a reference, please have a look at our <a href="#">examples</a>.</p>
-
-<h3 id="downloading-the-macros">Downloading the macros</h3>
-<p>Before you can work with the macros, you need to fetch the files form the repository.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>filename foo url "https://https://raw.githubusercontent.com/WatDurCodeGroup/ribosome/master/dist/main.min.sas";
+<h3 id="syntax">Syntax</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%lowRiskDrinking(out=lowRiskDrinking,
+                 cchs_data=&lt;data-set&gt;,
+                 demographics=&lt;var-list&gt;,
+                 adultsOnly=true|false)
 </code></pre></div></div>
 
-<p>This will put the macros into a file reference named <code class="highlighter-rouge">foo</code> that you can bring into your SAS session.</p>
+<h3 id="arguments">Arguments</h3>
+<p><code class="highlighter-rouge">out = lowRiskDrinking</code> names the output dataset that will contain the dummy coding. Defaults to <em>lowRiskDrinking</em>.</p>
 
-<p><strong>Note</strong> that running the <code class="highlighter-rouge">filename</code> statement above does not make the macros accessible to SAS  automatically. The job of the <code class="highlighter-rouge">filename</code> statement is to create the connection to the file containing the macros. This allows you to reference multiple versions of Ribosome at the same time.</p>
+<p><code class="highlighter-rouge">cchs_data = &lt;data-set&gt;</code> names the input dataset containing the variables to be processed. Typically this will be the main <abbr title="Canadian Community Health Survey">CCHS</abbr> dataset.</p>
 
-<h3 id="including-the-macros">Including the macros</h3>
-<p>Assuming that you successfully created a file reference to <code class="highlighter-rouge">foo</code>, as written above, you can now bring the macros into your SAS session.</p>
+<p><code class="highlighter-rouge">demographics = var-list</code> a space-seperated list of variables to copy from the input data set. Use this arguement to select variables of interest for crosstabulation tables.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%include foo;
-</code></pre></div></div>
+<p><code class="highlighter-rouge">adultsOnly = true|false</code> determines whether respondents less than 19 are excluded from the analysis. Defaults to <code class="highlighter-rouge">TRUE</code>.</p>
 
-<div class="panel panel-warning">
-  <header class="panel-heading">   
-  <i data-fa-symbol="magic" class="fas fa-magic"></i>
-  <h5 class="panel-title"><svg class="icon-inline"><use xlink:href="#magic"></use></svg> Pro tip</h5>
-  </header>
-  <div class="panel-body">
-    <p>You can tell SAS to write the contents of <code>foo</code> to the log using <code>&#37;include foo / source2;</code>.</p>
-  </div>
-</div>
+<h3 id="details">Details</h3>
+<p>The <code class="highlighter-rouge">%lowRiskDrinking</code> macro returns a one (<code class="highlighter-rouge">1</code>) for respondents that follow Guideline 2 of the Canadian-Low-Risk Guidelines and zero (<code class="highlighter-rouge">0</code>) for those that do not. Population exclusions, if applied, and respondents who refused to answer or with unkown information are assigned a <code class="highlighter-rouge">null</code> value.</p>
 
-<p>That’s it! You’re now ready to call up the macros and start dummy coding!</p>
+<p><em>Definition of Low-Risk Drinking</em></p>
 
-<h3 id="further-reading">Further reading</h3>
+<p>The Canadian Centre on Substance Use and Addiction publish five recommendations that together make up the Canadian Low-Risk Drinking Guidelines. Guideline 2 is used to classifiy drinkers based on their risk for long-term health effects.</p>
+
+<p>The guideline recommends:</p>
 <ul>
-  <li>The <a href="#">macro documentation</a> contains an full description of each macro, it’s parameters, and outputs.</li>
-  <li>Check out our <a href="#">examples</a> for details on setting up your program.</li>
+  <li>10 drinks a week for women, with no more than 2 drinks a day most days.</li>
+  <li>15 drinks a week for men, with no more than 3 drinks a day most days.</li>
 </ul>
 
-<p><small>Find an error on this page? Please <a href="https://github.com/WatDurCodeGroup/ribosome/issues" title="File and issue on Github">file an issue</a>.</small></p>
 
 
             </div>
