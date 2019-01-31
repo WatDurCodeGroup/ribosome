@@ -112,7 +112,37 @@
 </div>
             <div class="col-md-8">
             <h2>%secondHandSmoke</h2>
+<p>Idenfity respondents that were exposed to envrionmental tobacco smoke.</p>
 
+<h3 id="syntax">Syntax</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%secondHandSmoke(out=lowRiskDrinking, cchs_data=&lt;data-set&gt;, demographics=&lt;var-list&gt;, nonSmokersOnly=true|false)
+</code></pre></div></div>
+
+<h3 id="arguments">Arguments</h3>
+<ul>
+  <li><code class="highlighter-rouge">out = secondHandSmoke</code> names the output dataset that will contain the dummy coding. Defaults to <em>secondHandSmoke</em>.</li>
+  <li><code class="highlighter-rouge">cchs_data = &lt;data-set&gt;</code> names the input dataset containing the variables to be processed. Typically this will be the main <abbr title="Canadian Community Health Survey">CCHS</abbr> dataset.</li>
+  <li><code class="highlighter-rouge">demographics = var-list</code> a space-seperated list of variables to copy from the input data set. Use this arguement to select variables of interest for crosstabulation tables.</li>
+  <li><code class="highlighter-rouge">nonSmokersOnly = true|false</code> determines whether respondents that indicated they did not smoke are excluded from the analysis. Defaults to <code class="highlighter-rouge">TRUE</code>.</li>
+</ul>
+
+<h3 id="outputs">Outputs</h3>
+<ul>
+  <li><code class="highlighter-rouge">etsAny</code> a numeric variable that contains the dummy coding for exposure to any of <code class="highlighter-rouge">etsPublic</code>, <code class="highlighter-rouge">etsVehicle</code>, or <code class="highlighter-rouge">etsWork</code>.</li>
+  <li><code class="highlighter-rouge">etsPublic</code> a numeric variable that contains the dummy coding for exposure to envrionmental tobacco smoke in public places.</li>
+  <li><code class="highlighter-rouge">etsVehicle</code> a numeric variable that contains the dummy coding for exposure to envrionmental tobacco smoke in a private vehicle.</li>
+  <li><code class="highlighter-rouge">etsWork</code> a numeric variable that contains the dummy coding for exposure to envrionmental tobacco smoke in the workplace, or at school.</li>
+  <li><code class="highlighter-rouge">exclude</code> a numeric variable that indicates a population exclusion. <strong>Note</strong> this variable is created only when <code class="highlighter-rouge">nonSmokersOnly = true</code>.</li>
+</ul>
+
+<h3 id="details">Details</h3>
+<p>The <code class="highlighter-rouge">%secondHandSmoke</code> macro returns a one (<code class="highlighter-rouge">1</code>) for respondents that were exposed to envrionmental tobacco smoke and zero (<code class="highlighter-rouge">0</code>) for those that were not. Population exclusions, if applied, and respondents who refused to answer or with unkown information are assigned a <code class="highlighter-rouge">null</code> value.</p>
+
+<p>A heavy drinking episode is defined as:</p>
+<ul>
+  <li>5 or more drinks on one occasion for men.</li>
+  <li>4 or more drinks on one occasion for women.</li>
+</ul>
 
 
 

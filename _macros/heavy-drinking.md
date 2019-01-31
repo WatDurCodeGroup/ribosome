@@ -20,7 +20,7 @@ Idenfity respondents that had a heavy drinking episode at least once a month in 
 ```
 
 ### Arguments
-+ `out = lowRiskDrinking` names the output dataset that will contain the dummy coding. Defaults to *heavyDrinking*.
++ `out = heavyDrinking` names the output dataset that will contain the dummy coding. Defaults to *heavyDrinking*.
 + `cchs_data = <data-set>` names the input dataset containing the variables to be processed. Typically this will be the main <abbr title="Canadian Community Health Survey">CCHS</abbr> dataset.
 + `demographics = var-list` a space-seperated list of variables to copy from the input data set. Use this arguement to select variables of interest for crosstabulation tables.
 + `adultsOnly = true|false` determines whether respondents less than 19 are excluded from the analysis. Defaults to `TRUE`.
