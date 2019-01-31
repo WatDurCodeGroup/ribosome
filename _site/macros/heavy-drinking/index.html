@@ -111,48 +111,9 @@
   
 </div>
             <div class="col-md-8">
-            <h2 id="getting-started">Getting Started</h2>
-<p>Ribosome is a flat-file collection of macros that are run with <a href="https://sas.com">SAS</a>. Ribosome works best with SAS version <code class="highlighter-rouge">&gt;=9.4</code>.</p>
+            <h2>%heavyDrinking</h2>
 
-<p>If you don’t have SAS installed on your system, you can download a free copy of <a href="https://www.sas.com/en_us/software/university-edition.html">SAS University Edition</a> for non-commercial use.</p>
 
-<p>If you’re already set up with SAS and are looking for a reference, please have a look at our <a href="#">examples</a>.</p>
-
-<h3 id="downloading-the-macros">Downloading the macros</h3>
-<p>Before you can work with the macros, you need to fetch the files form the repository.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>filename foo url "https://https://raw.githubusercontent.com/WatDurCodeGroup/ribosome/master/dist/main.min.sas";
-</code></pre></div></div>
-
-<p>This will put the macros into a file reference named <code class="highlighter-rouge">foo</code> that you can bring into your SAS session.</p>
-
-<p><strong>Note</strong> that running the <code class="highlighter-rouge">filename</code> statement above does not make the macros accessible to SAS  automatically. The job of the <code class="highlighter-rouge">filename</code> statement is to create the connection to the file containing the macros. This allows you to reference multiple versions of Ribosome at the same time.</p>
-
-<h3 id="including-the-macros">Including the macros</h3>
-<p>Assuming that you successfully created a file reference to <code class="highlighter-rouge">foo</code>, as written above, you can now bring the macros into your SAS session.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%include foo;
-</code></pre></div></div>
-
-<div class="panel panel-warning">
-  <header class="panel-heading">   
-  <i data-fa-symbol="magic" class="fas fa-magic"></i>
-  <h5 class="panel-title"><svg class="icon-inline"><use xlink:href="#magic"></use></svg> Pro tip</h5>
-  </header>
-  <div class="panel-body">
-    <p>You can tell SAS to write the contents of <code>foo</code> to the log using <code>&#37;include foo / source2;</code>.</p>
-  </div>
-</div>
-
-<p>That’s it! You’re now ready to call up the macros and start dummy coding!</p>
-
-<h3 id="further-reading">Further reading</h3>
-<ul>
-  <li>The <a href="#">macro documentation</a> contains an full description of each macro, it’s parameters, and outputs.</li>
-  <li>Check out our <a href="#">examples</a> for details on setting up your program.</li>
-</ul>
-
-<p><small>Find an error on this page? Please <a href="https://github.com/WatDurCodeGroup/ribosome/issues" title="File and issue on Github">file an issue</a>.</small></p>
 
 
             </div>

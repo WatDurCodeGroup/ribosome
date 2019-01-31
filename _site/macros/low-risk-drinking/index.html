@@ -95,11 +95,18 @@
     
     </div>
   
+  
+  
     <h2 class="list-group-item">Macros</h2>
+    
     <div class="list-unstyled list-group">
-    
+      
       <a class="list-group-item" href="/ribosome/macros/low-risk-drinking/">%lowRiskDrinking</a>
-    
+      
+      <a class="list-group-item" href="/ribosome/macros/heavy-drinking/">%heavyDrinking</a>
+      
+      <a class="list-group-item" href="/ribosome/macros/second-hand-smoke/">%secondHandSmoke</a>
+      
     </div>
   
 </div>
@@ -108,20 +115,22 @@
 <p>Idenfity respondents at no increased long-term health risk, according to the Canadian Low-Risk Drinking Guidelines: Guideline 2</p>
 
 <h3 id="syntax">Syntax</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%lowRiskDrinking(out=lowRiskDrinking,
-                 cchs_data=&lt;data-set&gt;,
-                 demographics=&lt;var-list&gt;,
-                 adultsOnly=true|false)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%lowRiskDrinking(out=lowRiskDrinking, cchs_data=&lt;data-set&gt;, demographics=&lt;var-list&gt;, adultsOnly=true|false)
 </code></pre></div></div>
 
 <h3 id="arguments">Arguments</h3>
-<p><code class="highlighter-rouge">out = lowRiskDrinking</code> names the output dataset that will contain the dummy coding. Defaults to <em>lowRiskDrinking</em>.</p>
+<ul>
+  <li><code class="highlighter-rouge">out = lowRiskDrinking</code> names the output dataset that will contain the dummy coding. Defaults to <em>lowRiskDrinking</em>.</li>
+  <li><code class="highlighter-rouge">cchs_data = &lt;data-set&gt;</code> names the input dataset containing the variables to be processed. Typically this will be the main <abbr title="Canadian Community Health Survey">CCHS</abbr> dataset.</li>
+  <li><code class="highlighter-rouge">demographics = var-list</code> a space-seperated list of variables to copy from the input data set. Use this arguement to select variables of interest for crosstabulation tables.</li>
+  <li><code class="highlighter-rouge">adultsOnly = true|false</code> determines whether respondents less than 19 are excluded from the analysis. Defaults to <code class="highlighter-rouge">TRUE</code>.</li>
+</ul>
 
-<p><code class="highlighter-rouge">cchs_data = &lt;data-set&gt;</code> names the input dataset containing the variables to be processed. Typically this will be the main <abbr title="Canadian Community Health Survey">CCHS</abbr> dataset.</p>
-
-<p><code class="highlighter-rouge">demographics = var-list</code> a space-seperated list of variables to copy from the input data set. Use this arguement to select variables of interest for crosstabulation tables.</p>
-
-<p><code class="highlighter-rouge">adultsOnly = true|false</code> determines whether respondents less than 19 are excluded from the analysis. Defaults to <code class="highlighter-rouge">TRUE</code>.</p>
+<h3 id="outputs">Outputs</h3>
+<ul>
+  <li><code class="highlighter-rouge">lowRiskDrinking</code> a numeric variable that contains the dummy coding.</li>
+  <li><code class="highlighter-rouge">exclude</code> a numeric variable that indicates a population exclusion. <strong>Note</strong> this variable is created only when <code class="highlighter-rouge">adultsOnly = true</code>.</li>
+</ul>
 
 <h3 id="details">Details</h3>
 <p>The <code class="highlighter-rouge">%lowRiskDrinking</code> macro returns a one (<code class="highlighter-rouge">1</code>) for respondents that follow Guideline 2 of the Canadian-Low-Risk Guidelines and zero (<code class="highlighter-rouge">0</code>) for those that do not. Population exclusions, if applied, and respondents who refused to answer or with unkown information are assigned a <code class="highlighter-rouge">null</code> value.</p>

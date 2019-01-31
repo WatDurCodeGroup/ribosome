@@ -15,7 +15,3 @@ list:
         url: /running-a-dummy-code-macro.html
       - page: Merge bootstarp weights
         url: /merge-bootstarp-weights.html
-  - title: Macros
-    subpages:
-      - page: "%lowRiskDrinking"
-        url: /macros/low-risk-drinking/

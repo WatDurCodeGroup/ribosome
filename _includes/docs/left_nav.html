@@ -7,4 +7,14 @@
     {% endfor %}
     </div>
   {% endfor %}
+  {% assign mymacros = site.macros | group_by: 'category' %}
+  {% for category in mymacros %}
+    <h2 class="list-group-item">{{ category.name | capitalize }}</h2>
+    {% assign items = category.items | sort: 'order' %}
+    <div class="list-unstyled list-group">
+      {% for thisitem in items %}
+      <a class="list-group-item" href="{{ site.baseurl }}{{ thisitem.url }}">{{ thisitem.name }}</a>
+      {% endfor %}
+    </div>
+  {% endfor %}
 </div>
