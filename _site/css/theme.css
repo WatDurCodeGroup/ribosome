@@ -123,8 +123,8 @@ hr {
   height: 0; }
 
 pre {
-  overflow-x: scroll;
-  overflow-y: auto; }
+  overflow-y: auto;
+  overflow-x: scroll;  }
 
 code,
 kbd,
@@ -726,7 +726,7 @@ pre {
   font-size: 15px;
   line-height: 1.4375;
   word-break: normal;
-  overflow-wrap: normal;
+  word-wrap: normal;
   color: #fff;
   background-color: #001628;
   border: 1px solid #ccc;
