@@ -123,7 +123,8 @@ hr {
   height: 0; }
 
 pre {
-  overflow: auto; }
+  overflow-y: auto;
+  overflow-x: scroll; }
 
 code,
 kbd,
@@ -720,21 +721,21 @@ kbd {
 
 pre {
   display: block;
-  padding: 11px;
+  padding: 30px 15px;
   margin: 0 0 11.5px;
   font-size: 15px;
   line-height: 1.4375;
-  word-break: break-all;
-  word-wrap: break-word;
-  color: #333333;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
+  word-break: normal;
+  word-wrap: normal;
+  color: #fff;
+  background-color: #001628;
+  border: 1px solid #333;
   border-radius: 4px; }
   pre code {
     padding: 0;
     font-size: inherit;
     color: inherit;
-    white-space: pre-wrap;
+    white-space: pre;
     background-color: transparent;
     border-radius: 0; }
 

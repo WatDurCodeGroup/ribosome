@@ -1,8 +1,10 @@
 ---
 published: true
 layout: "theme-base/documentation"
-permalink: /docs
-title: Ribosome - Syntax files for CCHS estimation
+name: "Getting Started"
+category: documentation
+order: 1
+title: "Getting Started - Ribosome: Syntax files for CCHS estimation"
 language: en
 altLangPrefix: documentation
 dateModified: "2019-01-23"

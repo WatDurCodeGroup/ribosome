@@ -18,3 +18,9 @@ collections:
   macros:
     output: true
     permalink: /macros/:path/
+  documentation:
+    output: true
+    permalink: /docs/:path/
+  examples:
+    output: true
+    permalink: /examples/:path/

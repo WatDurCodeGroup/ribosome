@@ -34,10 +34,13 @@
 			<div id="wb-bnr" class="container-fluid">
 				<div class="container">
 					<div class="row">
+            <div class="visible-xs visible-sm">
+              {% include base/mobimenu.html %}
+            </div>
 						<div id="wb-sttl" class="col-md-2">
 							{% include theme-base/brand.html %}
 						</div>
-            <nav role="navigation" id="wb-sm" data-ajax-fetch="{% if page.altMenu == null or page.altMenu == '' %}http://wet-boew.github.io/wet-boew/ajax/sitemenu{% else %}{{ page.altMenu }}{% endif %}-{{ page.language }}.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+            <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
               {% include base/sitemenu.html %}
             </nav>
 					</div>

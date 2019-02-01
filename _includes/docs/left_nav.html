@@ -1,10 +1,22 @@
 <div class="col-md-3 list-group">
-  {% for item in site.data.toc.list %}
-    <h2 class="list-group-item">{{ item.title }}</h2>
+  {% assign mydocs = site.documentation | group_by: 'category' %}
+  {% for category in mydocs %}
+    <h2 class="list-group-item">{{ category.name | capitalize }}</h2>
+    {% assign items = category.items | sort: 'order' %}
     <div class="list-unstyled list-group">
-    {% for entry in item.subpages %}
-      <a class="list-group-item" href="{{ site.baseurl }}{{ entry.url }}">{{ entry.page }}</a>
-    {% endfor %}
+      {% for thisitem in items %}
+      <a class="list-group-item" href="{{ site.baseurl }}{{ thisitem.url }}">{{ thisitem.name }}</a>
+      {% endfor %}
+    </div>
+  {% endfor %}
+  {% assign myexamples = site.examples | group_by: 'category' %}
+  {% for category in myexamples %}
+    <h2 class="list-group-item">{{ category.name | capitalize }}</h2>
+    {% assign items = category.items | sort: 'order' %}
+    <div class="list-unstyled list-group">
+      {% for thisitem in items %}
+      <a class="list-group-item" href="{{ site.baseurl }}{{ thisitem.url }}">{{ thisitem.name }}</a>
+      {% endfor %}
     </div>
   {% endfor %}
   {% assign mymacros = site.macros | group_by: 'category' %}
