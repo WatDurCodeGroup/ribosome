@@ -43,17 +43,24 @@
 		<header role="banner">
 			<div id="wb-bnr" class="container-fluid">
 				<div class="container">
-					<div class="row">
-						<div id="wb-sttl" class="col-md-2">
-							<a href="/ribosome/">
+					<div class="head-flex">
+						<div class="visible-xs visible-sm">
+						  <ul class="pnl-btn list-inline text-right">
+	<i data-fa-symbol="menu" class="fas fa-bars"></i>
+	<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button"><svg class="icon-sm"><use xlink:href="#menu"><span class="wb-inv">Search and menus</span></use></svg></a></li>
+</ul>
+<section id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-r"></section>
+						</div>
+						<div id="wb-sttl">
+						  <a href="/ribosome/">
 	<span class="nav-title">Ribosome</span>
 </a>
 
 						</div>
-            <nav role="navigation" id="wb-sm" data-ajax-fetch="http://wet-boew.github.io/wet-boew/ajax/sitemenu-en.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
-              <div class="nvbar nvbar-flex">
+						<nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+						  <div class="nvbar nvbar-flex">
 	<h2>Topics menu</h2>
-    <ul class="list-inline menu">
+    <ul class="list-inline menu" role="menubar">
       <li><a href="/ribosome/docs/getting-started/">Getting started</a></li>
       <li><a href="/ribosome/docs/getting-started/">Documentation</a></li>
       <li><a href="#">Examples</a></li>
@@ -61,7 +68,11 @@
     </ul>
 </div>
 
-            </nav>
+						</nav>
+						<div class="download">
+							<i data-fa-symbol="external" class="fas fa-external-link-alt"></i>
+						  <a class="btn btn-second" href="https://github.com/WatDurCodeGroup/ribosome" title="Go to the repository on GitHub">Fork on GitHub <svg class="icon-sm"><use xlink:href="#external"></use></svg></a>
+						</div>
 					</div>
 				</div>
 			</div>

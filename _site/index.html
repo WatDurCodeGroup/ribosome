@@ -44,15 +44,14 @@
 			<div id="wb-bnr" class="container-fluid">
 				<div class="container">
 					<div class="head-flex">
-						<div class="visible-xs visible-sm">
-						  
-<ul class="pnl-btn list-inline text-right">
-
-	<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+						<section class="wb-mb-links visible-sm visible-xs" id="wb-glb-mn">
+							<h2>Menu</h2>
+							<ul class="pnl-btn list-inline text-right">
+	<i data-fa-symbol="menu" class="fas fa-bars"></i>
+	<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button"><svg class="icon-sm"><use xlink:href="#menu"><span class="wb-inv">Search and menus</span></use></svg></a></li>
 </ul>
-<div id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-r"></div>
-
-						</div>
+<section id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-r"></section>
+						</section>
 						<div id="wb-sttl">
 						  <a href="/ribosome/">
 	<span class="nav-title">Ribosome</span>
@@ -62,7 +61,7 @@
 						<nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
 						  <div class="nvbar nvbar-flex">
 	<h2>Topics menu</h2>
-    <ul class="list-inline menu">
+    <ul class="list-inline menu" role="menubar">
       <li><a href="/ribosome/docs/getting-started/">Getting started</a></li>
       <li><a href="/ribosome/docs/getting-started/">Documentation</a></li>
       <li><a href="#">Examples</a></li>
@@ -71,12 +70,10 @@
 </div>
 
 						</nav>
-						
-						<div class="download">
+						<div class="download visible-md visible-lg">
 							<i data-fa-symbol="external" class="fas fa-external-link-alt"></i>
 						  <a class="btn btn-second" href="https://github.com/WatDurCodeGroup/ribosome" title="Go to the repository on GitHub">Fork on GitHub <svg class="icon-sm"><use xlink:href="#external"></use></svg></a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
@@ -108,8 +105,7 @@
 <i data-fa-symbol="horse" class="fas fa-horse-head"></i>
 <i data-fa-symbol="hands" class="fas fa-hands-helping"></i>
 
-<div class="features container-fluid">  
-  <div class="row">
+<div class="features row">  
     <div class="container pad-tp-lg pad-bttm-lg">
       <div class="row feature">
         <div class="col-md-7">
@@ -141,10 +137,8 @@
         </div>
       </div>
     </div>
-  </div>
 </div>
-<div class="q-start container-fluid">
-  <div class="row">
+<div class="q-start row">
     <div class="container pad-tp-lg pad-bttm-lg">
       <div class="row">
         <div class="col-xs-12">
@@ -158,7 +152,6 @@
           </div>
       </div>
     </div>
-  </div>
 </div>
 
 		</main>

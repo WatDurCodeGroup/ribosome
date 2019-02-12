@@ -12,7 +12,6 @@ description: "An open community initative for standardized analysis"
 languagetoggle: "false"
 sitesearch: "false"
 breadcrumb: "false"
-download: "false"
 ---
 
 This example shows you how to set up the syntax files.

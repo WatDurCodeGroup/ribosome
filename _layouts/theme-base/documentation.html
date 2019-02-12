@@ -33,13 +33,20 @@
 		<header role="banner">
 			<div id="wb-bnr" class="container-fluid">
 				<div class="container">
-					<div class="row">
-						<div id="wb-sttl" class="col-md-2">
-							{% include theme-base/brand.html %}
+					<div class="head-flex">
+						<div class="visible-xs visible-sm">
+						  {% include base/mobimenu.html %}
 						</div>
-            <nav role="navigation" id="wb-sm" data-ajax-fetch="{% if page.altMenu == null or page.altMenu == '' %}http://wet-boew.github.io/wet-boew/ajax/sitemenu{% else %}{{ page.altMenu }}{% endif %}-{{ page.language }}.html" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
-              {% include base/sitemenu.html %}
-            </nav>
+						<div id="wb-sttl">
+						  {% include theme-base/brand.html %}
+						</div>
+						<nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+						  {% include base/sitemenu.html %}
+						</nav>
+						<div class="download">
+							<i data-fa-symbol="external" class="fas fa-external-link-alt"></i>
+						  <a class="btn btn-second" href="https://github.com/WatDurCodeGroup/ribosome" title="Go to the repository on GitHub">Fork on GitHub <svg class="icon-sm"><use xlink:href="#external"></use></svg></a>
+						</div>
 					</div>
 				</div>
 			</div>

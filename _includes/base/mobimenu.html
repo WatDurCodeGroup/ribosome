@@ -1,8 +1,5 @@
-{% if page.layout contains 'gcweb' %}
-<ul class="list-inline text-right chvrn">
-{% else %}
 <ul class="pnl-btn list-inline text-right">
-{% endif %}
-	<li><a href="#mb-pnl" title="{{ site.data.i18n-base[page.language].srch-menus }}" aria-controls="mb-pnl" class="overlay-lnk{% if page.layout contains 'gcweb' %}{% else %} btn btn-sm btn-default{% endif %}" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">{{ site.data.i18n-base[page.language].srch-menus }}</span></span></span></a></li>
+	<i data-fa-symbol="menu" class="fas fa-bars"></i>
+	<li><a href="#mb-pnl" title="{{ site.data.i18n-base[page.language].srch-menus }}" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button"><svg class="icon-sm"><use xlink:href="#menu"><span class="wb-inv">{{ site.data.i18n-base[page.language].srch-menus }}</span></use></svg></a></li>
 </ul>
-<div id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-r"></div>
+<section id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-r"></section>

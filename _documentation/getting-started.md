@@ -12,7 +12,6 @@ description: "An open community initative for standardized analysis"
 languagetoggle: "false"
 sitesearch: "false"
 breadcrumb: "false"
-download: "false"
 ---
 
 ## Getting Started
