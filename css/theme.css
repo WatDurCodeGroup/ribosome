@@ -9490,7 +9490,6 @@ main {
   text-decoration: underline;}
 
 #wb-sm {
-  background: #4ca6a6;
   color: #fff; }
   #wb-sm .menu {
     margin-bottom: 0; }
@@ -9732,6 +9731,10 @@ footer a{
     height: 1.5rem;
     width: 2rem;
     vertical-align: -0.125em; }
+  .icon-sm{
+	height: 20px;
+	width: 20px;
+	vertical-align: -0.125em;}
 /* Medium view and under */
 @media screen and (max-width: 1199px) {
   /*
@@ -9858,3 +9861,5 @@ footer a{
   /*
  Secondary menu (print view)
 */ }
+.head-flex{ display: flex; flex-direction: row; justify-content: space-between;}
+.nvbar-flex{ display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
