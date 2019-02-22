@@ -53,14 +53,8 @@
 			</div>
 		</header>
 		<main role="main" property="mainContentOfPage" class="{% if page.secondarymenu == "true" %}col-md-9 col-md-push-3{% else %}container-fluid{% endif %}">
-			<div class="row">
-			<div class="container">
-				<div class="row">
-					<h1 id="wb-cont" class="wb-inv" property="name">{{ page.title }}</h1>
-					{{ content }}
-				</div>
-			</div>
-			</div>			
+        <h1 id="wb-cont" class="wb-inv" property="name">{{ page.title }}</h1>
+				{{ content }}
 		</main>
 		<footer role="contentinfo" id="wb-info" class="container-fluid visible-sm visible-md visible-lg wb-navcurr">
 			<div class="container pad-tp-lg pad-bttm-lg">
