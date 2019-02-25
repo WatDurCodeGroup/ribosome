@@ -1,0 +1,1 @@
+%macro cannabisWeekly(out=cannabisWeekly, cchs_data=, demographics=);%local out cchs_data demographics;  %validate(data=&cchs_data,include=&demographics) data &out; set &cchs_data.(keep=ont_id drg_015 &demographics); select(drg_015); when(3,4,5) canWeekly = 1; when(1,2,6) canWeekly = 0; otherwise canWeekly = .; end; run;%mend cannabisWeekly;
