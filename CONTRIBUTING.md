@@ -2,7 +2,7 @@
 Thank you for taking the time to read this document. The success of this project requires a strong community of crontributors, such as yourself, and we greatly appreciate your interest in this work.
 
 To get started, here's some resources:
-+ Check out the [Ribosome project website](https://watdurcodegroup.github.io/ribosome) for a high-level overview of what we're doing
++ Check out the [Ribosome project website](https://watdurcodegroup.github.io/ribosome/) for a high-level overview of what we're doing
 + The [issues section](https://github.com/WatDurCodeGroup/ribosome/issues) of the repository is were project discussions take place
 
 ## Testing
