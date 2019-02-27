@@ -1,0 +1,1 @@
+%macro sunProtection(out=sunProtection, cchs_data=, demographics=);%local out cchs_data demographics;  %validate(data=&cchs_data,include=&demographics) data &out; set &cchs_data.(keep=ont_id ssbdvprt &demographics); select(ssbdvprt); when(1) sunProtection = 1; when(2) sunProtection = 0; otherwise sunProtection = .; end; run;%mend sunProtection;
