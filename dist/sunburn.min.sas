@@ -1,0 +1,1 @@
+%macro sunburn(out=sunburn, cchs_data=, demographics=);%local out cchs_data demographics;  %validate(data=&cchs_data,include=&demographics) data &out; set &cchs_data.(keep=ont_id ssb_005 &demographics); select(ssb_005); when(1) sunburn = 1; when(2) sunburn = 0; otherwise sunburn = .; end; run;%mend sunburn;
