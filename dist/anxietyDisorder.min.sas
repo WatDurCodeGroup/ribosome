@@ -1,0 +1,1 @@
+%macro anxietyDisorder(out=anxietyDisorder, cchs_data=, demographics=);%local out cchs_data demographics;  %validate(data=&cchs_data,include=&demographics) data &out; set &cchs_data.(keep=ont_id ccc_200 &demographics); select(ccc_200); when(1) anxietyDisorder = 1; when(2) anxietyDisorder = 0; otherwise anxietyDisorder = .; end; run;%mend anxietyDisorder;
