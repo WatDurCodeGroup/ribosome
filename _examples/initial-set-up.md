@@ -1,10 +1,10 @@
 ---
 published: true
 layout: "theme-base/documentation"
-name: "Inital set up"
+name: "Iniital set up"
 category: examples
 order: 1
-title: "Inital Set Up - Ribosome: Syntax files for CCHS estimation"
+title: "Initial Set Up - Ribosome: Syntax files for CCHS estimation"
 language: en
 altLangPrefix: documentation
 dateModified: "2019-01-23"
