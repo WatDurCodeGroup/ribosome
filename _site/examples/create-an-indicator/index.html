@@ -7,7 +7,7 @@
 		<meta charset="utf-8" />
 		<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-		<title>Getting Started - Ribosome: Syntax files for CCHS estimation</title>
+		<title>Create and indicator - Ribosome: Syntax files for CCHS estimation</title>
 
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<!-- Meta data -->
@@ -78,7 +78,7 @@
 			</div>
 		</header>
 		<main role="main" property="mainContentOfPage" class="container-fluid">
-			<h1 id="wb-cont" class="wb-inv" property="name">Getting Started - Ribosome: Syntax files for CCHS estimation</h1>
+			<h1 id="wb-cont" class="wb-inv" property="name">Create and indicator - Ribosome: Syntax files for CCHS estimation</h1>
       <div class="row">
         <div class="container">
           <div class="row">
@@ -121,49 +121,29 @@
   
 </div>
             <div class="col-md-8">
-            <h2 id="getting-started">Getting started</h2>
-<p>Ribosome is a flat-file collection of macros that are run with <a href="https://sas.com">SAS</a>. Ribosome works best with SAS version <code class="highlighter-rouge">&gt;=9.4</code>.</p>
+            <h2 id="introduction">Introduction</h2>
+<p>This example shows you how to create indicator dummy codes. A couple of things to note here:</p>
+<ol>
+  <li>Calling the correct macro</li>
+  <li>Setting correct parameter values</li>
+</ol>
 
-<p>If you don’t have SAS installed on your system, you can download a free copy of <a href="https://www.sas.com/en_us/software/university-edition.html">SAS University Edition</a> for non-commercial use.</p>
+<h3 id="code">Code</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>filename ribo url "https://raw.githubusercontent.com/WatDurCodeGroup/ribosome/master/dist/main.min.sas";
+%include ribo / source2;
 
-<p>If you’re already set up with SAS and are looking for a reference, please have a look at our <a href="#">examples</a>.</p>
+/* 1. Call the correct macro | 2. Set correct parameters */
+%heavyDrinking(out=lowRiskDrinking, cchs_data=MyCCHSdata, demographics=dhh_sex geodvhr4, adultsOnly=true)
 
-<h3 id="downloading-the-macros">Downloading the macros</h3>
-<p>Before you can work with the macros, you need to fetch the files form the repository.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>filename foo url "https://raw.githubusercontent.com/WatDurCodeGroup/ribosome/master/dist/main.min.sas";
 </code></pre></div></div>
+<h3 id="details">Details</h3>
+<p>Lines one and two in the example above are described previously. Line four calls the macro (<code class="highlighter-rouge">%heavyDrinking</code>) to create an indicator for heavy drinking. Macro parmaters are named between the round brackets <code class="highlighter-rouge">(...)</code>. In the example above, the macros create the output data <code class="highlighter-rouge">lowRiskDrinking</code>, using the source data <code class="highlighter-rouge">MyCCHSdata</code>. The macro will copy <code class="highlighter-rouge">dhh_sex</code> and <code class="highlighter-rouge">geodvhr4</code> from the source and limit dummy coding to adults.</p>
 
-<p>This will put the macros into a file reference named <code class="highlighter-rouge">foo</code> that you can bring into your SAS session.</p>
-
-<p><strong>Note</strong> that running the <code class="highlighter-rouge">filename</code> statement above does not make the macros accessible to SAS  automatically. The job of the <code class="highlighter-rouge">filename</code> statement is to create the connection to the file containing the macros. This allows you to reference multiple versions of Ribosome at the same time.</p>
-
-<h3 id="including-the-macros">Including the macros</h3>
-<p>Assuming that you successfully created a file reference to <code class="highlighter-rouge">foo</code>, as written above, you can now bring the macros into your SAS session.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%include foo;
-</code></pre></div></div>
-
-<div class="panel panel-warning">
-  <header class="panel-heading">   
-  <i data-fa-symbol="magic" class="fas fa-magic"></i>
-  <h5 class="panel-title"><svg class="icon-inline"><use xlink:href="#magic"></use></svg> Pro tip</h5>
-  </header>
-  <div class="panel-body">
-    <p>You can tell SAS to write the contents of <code>foo</code> to the log using <code>&#37;include foo / source2;</code>.</p>
-  </div>
-</div>
-
-<p>That’s it! You’re now ready to call up the macros and start dummy coding!</p>
-
-<h3 id="further-reading">Further reading</h3>
+<h3 id="further-reading">Further Reading</h3>
 <ul>
-  <li>The <a href="#">macro documentation</a> contains an full description of each macro, it’s parameters, and outputs.</li>
-  <li>Check out our <a href="#">examples</a> for details on setting up your program.</li>
+  <li>Getting started guide</li>
+  <li>Macro documentation</li>
 </ul>
-
-<p><small>Find an error on this page? Please <a href="https://github.com/WatDurCodeGroup/ribosome/issues" title="File and issue on Github">file an issue</a>.</small></p>
-
 
             </div>
           </div>
