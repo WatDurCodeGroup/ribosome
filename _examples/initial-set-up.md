@@ -1,7 +1,7 @@
 ---
 published: true
 layout: "theme-base/documentation"
-name: "Iniital set up"
+name: "Initial set up"
 category: examples
 order: 1
 title: "Initial Set Up - Ribosome: Syntax files for CCHS estimation"
