@@ -89,7 +89,7 @@
     
     <div class="list-unstyled list-group">
       
-      <a class="list-group-item" href="/ribosome/docs/getting-started/">Getting Started</a>
+      <a class="list-group-item" href="/ribosome/docs/getting-started/">Getting started</a>
       
     </div>
   
@@ -119,7 +119,29 @@
   
 </div>
             <div class="col-md-8">
-            <p>This example shows you how to set up the syntax files.</p>
+            <h2 id="introduction">Introduction</h2>
+<p>This example shows you the process of setting up Ribosome for the first time. There’s two jobs that need doing here:</p>
+<ol>
+  <li>Connect to the syntax</li>
+  <li>Load the syntax</li>
+</ol>
+
+<h3 id="code">Code</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* 1. Connect to the syntax */
+filename ribo url "https://raw.githubusercontent.com/WatDurCodeGroup/ribosome/master/dist/main.min.sas";
+/* 2. Pull syntax into the current program */
+%include ribo / source2;
+</code></pre></div></div>
+<h3 id="details">Details</h3>
+<p>Step one above downloads the syntax from Github and assigns the result to a file reference named <code class="highlighter-rouge">ribo</code>.</p>
+
+<p>Step two tells <code class="highlighter-rouge">SAS</code> to process the contents of <code class="highlighter-rouge">ribo</code>. This makes the macros you downloaded in step one available for use. The <code class="highlighter-rouge">source2</code> option writes the contents of <code class="highlighter-rouge">ribo</code> to the log.</p>
+
+<h3 id="further-reading">Further reading</h3>
+<ul>
+  <li>Getting started guide</li>
+  <li>Macro documentation</li>
+</ul>
 
             </div>
           </div>

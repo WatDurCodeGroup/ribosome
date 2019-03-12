@@ -1,7 +1,7 @@
 ---
 published: true
 layout: "theme-base/documentation"
-name: "Getting Started"
+name: "Getting started"
 category: documentation
 order: 1
 title: "Getting Started - Ribosome: Syntax files for CCHS estimation"
@@ -14,7 +14,7 @@ sitesearch: "false"
 breadcrumb: "false"
 ---
 
-## Getting Started
+## Getting started
 Ribosome is a flat-file collection of macros that are run with [SAS](https://sas.com). Ribosome works best with SAS version `>=9.4`.
 
 If you don't have SAS installed on your system, you can download a free copy of [SAS University Edition](https://www.sas.com/en_us/software/university-edition.html) for non-commercial use.
@@ -25,7 +25,7 @@ If you're already set up with SAS and are looking for a reference, please have a
 Before you can work with the macros, you need to fetch the files form the repository. 
 
 ```
-filename foo url "https://https://raw.githubusercontent.com/WatDurCodeGroup/ribosome/master/dist/main.min.sas";
+filename foo url "https://raw.githubusercontent.com/WatDurCodeGroup/ribosome/master/dist/main.min.sas";
 ```
 
 This will put the macros into a file reference named `foo` that you can bring into your SAS session.
