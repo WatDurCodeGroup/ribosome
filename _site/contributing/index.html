@@ -7,7 +7,7 @@
 		<meta charset="utf-8" />
 		<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-		<title>Ribosome - Syntax files for CCHS estimation</title>
+		<title>Contributing: Ribosome - Syntax files for CCHS estimation</title>
 
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<!-- Meta data -->
@@ -78,85 +78,55 @@
 			</div>
 		</header>
 		<main role="main" property="mainContentOfPage" class="container-fluid">
-			<h1 id="wb-cont" class="wb-inv" property="name">Ribosome - Syntax files for CCHS estimation</h1>
-      <div class="row">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3 list-group">
-  
-  
-    <h2 class="list-group-item">Documentation</h2>
-    
-    <div class="list-unstyled list-group">
-      
-      <a class="list-group-item" href="/ribosome/docs/getting-started/">Getting started</a>
-      
+        <h1 id="wb-cont" class="wb-inv" property="name">Contributing: Ribosome - Syntax files for CCHS estimation</h1>
+				<div class="container">
+
+<div class="row">
+
+<div class="col-xs-12">
+
+      <h2 id="how-to-contribute">How to contribute</h2>
+      <p>Thank you for taking the time to read this page. The success of this project requires a strong community of crontributors, such as yourself, and we greatly appreciate your interest in this work.</p>
+
+      <p>To get started, here’s some resources:</p>
+      <ul>
+        <li>Check out the <a href="https://watdurcodegroup.github.io/ribosome/">Ribosome project website</a> for a high-level overview of what we’re doing</li>
+        <li>The <a href="https://github.com/WatDurCodeGroup/ribosome/issues">issues section</a> of the repository is were project discussions take place</li>
+      </ul>
+
+      <h3 id="testing">Testing</h3>
+      <p>We don’t have any specific to test our macros, but we do quality check output data with <code class="highlighter-rouge">proc freq</code> tables. Please write a frequency table step for all new macros you create.</p>
+
+      <h3 id="submitting-changes">Submitting changes</h3>
+      <p>Please create a <a href="https://github.com/WatDurCodeGroup/ribosome/compare">GitHub Pull Request to Ribosome</a> with a description of the changes you made. We will be greatful if you include your frequency table example. Please limit your commit to one feature, whenever possible. Also, we would love it if you follow the coding conventions listed below.</p>
+
+      <p>Read more about <a href="https://help.github.com/en/articles/about-pull-requests">GitHub Pull Requests</a>.</p>
+
+      <p>Finally, please write clear and descriptive log messages for your commits. Single line messages are OK for small changes, but larger changes should be detailed. Something like this:</p>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git commit -m "A breif summary of the large change
+&gt;
+&gt; A paragraph with a description of the change and why this is needed."
+</code></pre></div>      </div>
+
+      <h3 id="coding-conventions">Coding conventions</h3>
+      <p>Have a look at the code to get an idea of the style. Our code is written for readability.
+Some specifics:</p>
+      <ul>
+        <li>Indent using two spaces</li>
+        <li>Use a space between list items and parameter lists <code class="highlighter-rouge">in( x, y, z )</code> not <code class="highlighter-rouge">in(x,y,z)</code>, and around operators <code class="highlighter-rouge">k = k + 1</code> not <code class="highlighter-rouge">k=k+1</code></li>
+        <li><em>N.B.</em> ths is an open community and someone, at some point, may need to read your code. Please be considerate of others.</li>
+      </ul>
+
+      <p>Many thanks!</p>
+
+      <p>Cheers!</p>
+
     </div>
-  
-  
-  
-    <h2 class="list-group-item">Examples</h2>
-    
-    <div class="list-unstyled list-group">
-      
-      <a class="list-group-item" href="/ribosome/examples/initial-set-up/">Initial set up</a>
-      
-      <a class="list-group-item" href="/ribosome/examples/create-an-indicator/">Create an indicator</a>
-      
-    </div>
-  
-  
-  
-    <h2 class="list-group-item">Macros</h2>
-    
-    <div class="list-unstyled list-group">
-      
-      <a class="list-group-item" href="/ribosome/macros/low-risk-drinking/">%lowRiskDrinking</a>
-      
-      <a class="list-group-item" href="/ribosome/macros/heavy-drinking/">%heavyDrinking</a>
-      
-      <a class="list-group-item" href="/ribosome/macros/second-hand-smoke/">%secondHandSmoke</a>
-      
-    </div>
-  
+
 </div>
-            <div class="col-md-8">
-            <h2>%heavyDrinking</h2>
-<p>Idenfity respondents that had a heavy drinking episode at least once a month in the past year.</p>
 
-<h3 id="syntax">Syntax</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%heavyDrinking(out=lowRiskDrinking, cchs_data=&lt;data-set&gt;, demographics=&lt;var-list&gt;, adultsOnly=true|false)
-</code></pre></div></div>
+</div>
 
-<h3 id="arguments">Arguments</h3>
-<ul>
-  <li><code class="highlighter-rouge">out = heavyDrinking</code> names the output dataset that will contain the dummy coding. Defaults to <em>heavyDrinking</em>.</li>
-  <li><code class="highlighter-rouge">cchs_data = &lt;data-set&gt;</code> names the input dataset containing the variables to be processed. Typically this will be the main <abbr title="Canadian Community Health Survey">CCHS</abbr> dataset.</li>
-  <li><code class="highlighter-rouge">demographics = var-list</code> a space-seperated list of variables to copy from the input data set. Use this arguement to select variables of interest for crosstabulation tables.</li>
-  <li><code class="highlighter-rouge">adultsOnly = true|false</code> determines whether respondents less than 19 are excluded from the analysis. Defaults to <code class="highlighter-rouge">TRUE</code>.</li>
-</ul>
-
-<h3 id="outputs">Outputs</h3>
-<ul>
-  <li><code class="highlighter-rouge">heavyDrinking</code> a numeric variable that contains the dummy coding.</li>
-  <li><code class="highlighter-rouge">exclude</code> a numeric variable that indicates a population exclusion. <strong>Note</strong> this variable is created only when <code class="highlighter-rouge">adultsOnly = true</code>.</li>
-</ul>
-
-<h3 id="details">Details</h3>
-<p>The <code class="highlighter-rouge">%heavyDrinking</code> macro returns a one (<code class="highlighter-rouge">1</code>) for respondents that had a heavy drinking episode and zero (<code class="highlighter-rouge">0</code>) for those that do not. Population exclusions, if applied, and respondents who refused to answer or with unkown information are assigned a <code class="highlighter-rouge">null</code> value.</p>
-
-<p>A heavy drinking episode is defined as:</p>
-<ul>
-  <li>5 or more drinks on one occasion for men.</li>
-  <li>4 or more drinks on one occasion for women.</li>
-</ul>
-
-
-
-            </div>
-          </div>
-        </div>
-      </div>    
 		</main>
 		<footer role="contentinfo" id="wb-info" class="container-fluid visible-sm visible-md visible-lg wb-navcurr">
 			<div class="container pad-tp-lg pad-bttm-lg">

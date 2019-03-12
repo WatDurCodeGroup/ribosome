@@ -12,6 +12,8 @@ github_username: WatDurCodeGroup
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
 
 # Macro documentation
 collections:

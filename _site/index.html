@@ -14,12 +14,12 @@
 		<meta name="description" content="An open community initative for standardized analysis" />
 		<!-- Meta data-->
 		<!--[if gte IE 9 | !IE ]><!-->
-<link href="https://watdurcodegroup.github.io/ribosome/assets/images/favicon.ico" rel="icon" type="image/x-icon" />
+<link href="http://localhost:4000/ribosome/assets/images/favicon.ico" rel="icon" type="image/x-icon" />
 <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
 <!--<![endif]-->
-<link rel="stylesheet" href="https://watdurcodegroup.github.io/ribosome/css/theme.css"/>
+<link rel="stylesheet" href="http://localhost:4000/ribosome/css/theme.css"/>
 <!--[if lt IE 9]>
-<link href="https://watdurcodegroup.github.io/ribosome/assets/images/favicon.ico" rel="shortcut icon" />
+<link href="http://localhost:4000/ribosome/assets/images/favicon.ico" rel="shortcut icon" />
 <link rel="stylesheet" href="http://wet-boew.github.io/wet-boew/css/ie8-wet-boew.min.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://wet-boew.github.io/wet-boew/js/ie8-wet-boew.min.js"></script>
@@ -44,6 +44,13 @@
 			<div id="wb-bnr" class="container-fluid">
 				<div class="container">
 					<div class="flex head-flex">
+						<div class="visible-xs visible-sm">
+						  <ul class="pnl-btn list-inline text-right">
+	<i data-fa-symbol="menu" class="fas fa-bars"></i>
+	<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button"><svg class="icon-sm"><use xlink:href="#menu"><span class="wb-inv">Search and menus</span></use></svg></a></li>
+</ul>
+<section id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-r"></section>
+						</div>
 						<div id="wb-sttl">
 						  <a href="/ribosome/">
 	<span class="nav-title">Ribosome</span>
@@ -56,24 +63,16 @@
     <ul class="list-inline menu" role="menubar">
       <li><a href="/ribosome/docs/getting-started/">Getting started</a></li>
       <li><a href="/ribosome/docs/getting-started/">Documentation</a></li>
-      <li><a href="#">Examples</a></li>
-      <li><a href="#">Contribute</a></li>
+      <li><a href="/ribosome/examples/initial-set-up/">Examples</a></li>
+      <li><a href="/ribosome/contributing/">Contribute</a></li>
     </ul>
 </div>
 
 						</nav>
-						<div class="download visible-md visible-lg">
+						<div class="download">
 							<i data-fa-symbol="external" class="fas fa-external-link-alt"></i>
 						  <a class="btn btn-second" href="https://github.com/WatDurCodeGroup/ribosome" title="Go to the repository on GitHub">Fork on GitHub <svg class="icon-sm"><use xlink:href="#external"></use></svg></a>
 						</div>
-						<section class="wb-mb-links visible-sm visible-xs" id="wb-glb-mn">
-						  <h2>Menu</h2>
-						  <ul class="pnl-btn list-inline text-right">
-	<i data-fa-symbol="menu" class="fas fa-bars"></i>
-	<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button"><svg class="icon-sm"><use xlink:href="#menu"><span class="wb-inv">Search and menus</span></use></svg></a></li>
-</ul>
-<section id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-r"></section>
-						</section>
 					</div>
 				</div>
 			</div>

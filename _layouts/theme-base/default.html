@@ -34,20 +34,19 @@
 			<div id="wb-bnr" class="container-fluid">
 				<div class="container">
 					<div class="flex head-flex">
+						<div class="visible-xs visible-sm">
+						  {% include base/mobimenu.html %}
+						</div>
 						<div id="wb-sttl">
 						  {% include theme-base/brand.html %}
 						</div>
 						<nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
 						  {% include base/sitemenu.html %}
 						</nav>
-						<div class="download visible-md visible-lg">
+						<div class="download">
 							<i data-fa-symbol="external" class="fas fa-external-link-alt"></i>
 						  <a class="btn btn-second" href="https://github.com/WatDurCodeGroup/ribosome" title="Go to the repository on GitHub">Fork on GitHub <svg class="icon-sm"><use xlink:href="#external"></use></svg></a>
 						</div>
-						<section class="wb-mb-links visible-sm visible-xs" id="wb-glb-mn">
-						  <h2>{{ site.data.i18n-base[page.language].menu }}</h2>
-						  {% include base/mobimenu.html %}
-						</section>
 					</div>
 				</div>
 			</div>
