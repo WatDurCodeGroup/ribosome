@@ -1,0 +1,1 @@
+%macro aboriginalIdentity(out=aboriginalIdentity, cchs_data=, demographics=);%local out cchs_data demographics;  %validate(data=&cchs_data,include=&demographics) data &out; set &cchs_data.(keep=ont_id sdcdvabt &demographics); select(sdcdvabt); when(1) aboriginalIdentity = 0; when(2) aboriginalIdentity = 1; otherwise aboriginalIdentity = .; end; run;%mend aboriginalIdentity;
