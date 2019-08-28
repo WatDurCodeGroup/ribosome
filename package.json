@@ -9,11 +9,10 @@
     "gulp": "gulp",
     "build": "gulp append"
   },
-  "dependencies": {
-    "gulp-cli": "^2.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-ex-replace": "^0.5.8",
     "gulp-rename": "^1.4.0"
