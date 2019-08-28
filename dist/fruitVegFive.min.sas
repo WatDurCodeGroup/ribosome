@@ -1,0 +1,1 @@
+%macro fruitVegFive(out=fruitVegFive, cchs_data=, demographics=);%local out cchs_data demographics;  %validate( data=&cchs_data, include=&demographics ) data &out; set &cchs_data.( keep=ont_id dhh_age FVCDVGDT &demographics ); select( FVCDVGDT ); when( 1 ) fruitVegFive = 0; when( 2, 3 ) fruitVegFive = 1; otherwise fruitVegFive = .; end; run;%mend fruitVegFive;
