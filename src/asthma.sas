@@ -1,12 +1,12 @@
 /* ===========================================================
- * Dummy code for heart disease
+ * Dummy code for asthma
  *
- * Default output var = hasHeartDisease
+ * Default output var = hasAsthma
  * ===========================================================
  * | Code | Description                                      |
  * | ------------------------------------------------------- |
- * | 0    | Does not have heart disease                      |
- * | 1    | Has heart disease                                |
+ * | 0    | Does not have asthma                             |
+ * | 1    | Has asthma                                       |
  * | .    | Required info is missing                         |
  * |=========================================================|
  *
@@ -16,8 +16,8 @@
  *
  * ===========================================================
  */
-%macro heartDisease(
-  out=hasHeartDisease,
+%macro asthma(
+  out=hasAsthma,
   cchs_data=,
   demographics=,
 );
@@ -26,9 +26,9 @@
   %validate(data=&cchs_data,include=&demographics)
   data &out;
     set &cchs_data.(keep=ont_id ccc_085 &demographics);
-    select(ccc_085);
-      when(1) hasHeartDisease = 1;
-      when(2) hasHeartDisease = 0;
+    select(ccc_015);
+      when(1) hasAsthma = 1;
+      when(2) hasAsthma = 0;
       otherwise hasHeartDisease = .;
     end;
   /*Population exclusions*/
