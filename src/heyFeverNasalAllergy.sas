@@ -29,6 +29,7 @@
     select(ccc_180);
       when(1) hasNasalAllergy = 1;
       when(2) hasNasalAllergy = 0;
+      when(6) hasNasalAllergy = 0;
       otherwise hasNasalAllergy = .;
     end;
   /*Population exclusions*/
