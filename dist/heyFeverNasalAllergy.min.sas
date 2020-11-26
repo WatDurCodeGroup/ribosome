@@ -1,0 +1,1 @@
+%macro heyFeverNasalAllergy( out=hasNasalAllergy, cchs_data=, demographics=,);%local out cchs_data demographics;  %validate(data=&cchs_data,include=&demographics) data &out; set &cchs_data.(keep=ont_id ccc_180 &demographics); select(ccc_180); when(1) hasNasalAllergy = 1; when(2) hasNasalAllergy = 0; otherwise hasNasalAllergy = .; end;  run;%mend heyFeverNasalAllergy;
