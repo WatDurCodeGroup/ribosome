@@ -25,7 +25,7 @@
   /*Parameter validation*/
   %validate(data=&cchs_data,include=&demographics)
   data &out;
-    set &cchs_data.(keep=ont_id ccc_085 &demographics);
+    set &cchs_data.(keep=ont_id ccc_015 &demographics);
     select(ccc_015);
       when(1) hasAsthma = 1;
       when(2) hasAsthma = 0;
