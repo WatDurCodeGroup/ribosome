@@ -21,7 +21,7 @@
   cchs_data=,
   demographics=,
 );
-%local out cchs_data demographics excBreastfeeding;
+%local out cchs_data demographics;
   /*Parameter validation*/
   %validate(data=&cchs_data,include=&demographics)
   data &out;

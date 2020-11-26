@@ -21,7 +21,7 @@
   cchs_data=,
   demographics=,
 );
-%local out cchs_data demographics excBreastfeeding;
+%local out cchs_data demographics;
   /*Parameter validation*/
   %validate(data=&cchs_data,include=&demographics)
   data &out;
@@ -29,8 +29,8 @@
     select(ccc_015);
       when(1) hasAsthma = 1;
       when(2) hasAsthma = 0;
-      otherwise hasHeartDisease = .;
+      otherwise hasAsthma = .;
     end;
   /*Population exclusions*/
   run;
-%mend heartDisease;
+%mend asthma;
